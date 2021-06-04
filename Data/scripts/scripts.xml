@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<Scripts>
+    <Script>main/dialog.lua</Script>
+    <Script>main/test.lua</Script>
+    <Script>main/battle.lua</Script>
+</Scripts>

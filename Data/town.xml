@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Level>
+	<Title>Town</Title>
+	<Background>town.png</Background>
+	<Collision>town-colmap.png</Collision>
+	<Entrances>
+		<Spawn X="240" Y="192" Z="0">a</Spawn>
+		<Spawn X="48" Y="48" Z="0">b</Spawn>
+		<Spawn X="160" Y="160" Z="0">c</Spawn>
+	</Entrances>
+	<Objects>
+		<Person id="Somebody">
+			<File>locke.png</File>
+			<Spawn X="192" Y="688" Z="0"></Spawn>
+            <Dialogue>
+                <Box id="1">
+                    <Text>Ignore me!</Text>
+                </Box>
+            </Dialogue>
+		</Person>
+		<Person id="Old Man">
+			<File>oldman.png</File>
+			<Spawn X="224" Y="192" Z="0"></Spawn>
+            <Dialogue>
+                <Box id="1">
+                    <Text>When I was your age I rode a pony and slayed dragons with my mind.</Text>
+                    <Option jump="2">So do I!</Option>
+                    <Option jump="3">Lay off the pills gramps.</Option>
+                </Box>
+                <Box id="2">
+                    <Text>Good, now do this quest for me.</Text>
+				    <Mission>mission02</Mission>
+                    <End />
+                </Box>
+                <Box id="3">
+                    <Text>How rude! Prepare to die!</Text>
+                    <Battle>Old man</Battle>
+                    <!-- Insert start of battle -->
+                    <End />
+                </Box>
+            </Dialogue>
+		</Person>
+	</Objects>
+</Level>

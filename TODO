@@ -1,0 +1,9 @@
+-1. Battling
+2. More scripting functions
+3. Rework player movement perhaps
+4. Be able to move to a new area from an existing one (Somewhat implemented)
+5. add res switcher
+6. allow scripts to draw directly to the res or to the scale
+
+Note on #4: I believe I need to rework the area loading system to implement this, currently it goes to "town.xml" when you hit a blue space.
+But with this method, I have no way of controlling multiple exit points.

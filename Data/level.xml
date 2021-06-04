@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Level>
+    <Title>Demo Area</Title>
+    <Background>colmap2.png</Background>
+    <Collision>colmap2.png</Collision>
+    <Foregrounds>
+        <File>fg.png</File>
+        <File>fg2.png</File>
+    </Foregrounds>
+    <Entrances>
+        <Spawn X="240" Y="16" Z="0">a</Spawn>
+        <Spawn X="48" Y="48" Z="0">b</Spawn>
+        <Spawn X="160" Y="160" Z="0">c</Spawn>
+    </Entrances>
+    <Objects>
+        <Person id="Old Man">
+            <File>oldman.png</File>
+            <Spawn X="128" Y="112" Z="0"></Spawn>
+            <Dialogue>
+                <Box id="1">
+                    <Text>Want to hear me ramble about my younger days for hours on end?Want to hear me ramble about my younger days for hours on end?</Text>
+                    <Option jump="2">Yes</Option>
+                    <Option jump="3">How about you get lost?</Option>
+                </Box>
+                <Box id="2">
+                    <Text>Hmm... I seem to have forgotten it. *sigh* I'm old.</Text>
+                    <End />
+                </Box>
+                <Box id="3">
+                    <Text>How rude!</Text>
+                </Box>
+            </Dialogue>
+        </Person>
+        <Person id="Evil Twin">
+            <File>locke.png</File>
+            <Spawn X="256" Y="144" Z="0"></Spawn>
+            <Dialogue>
+                <Box id="1">
+                    <Text>I'm your evil twin! Mwa ha ha!</Text>
+                    <Option jump="2">I like tacos.</Option>
+                    <Option jump="3">No, I'm the evil one.</Option>
+                    <Option jump="4">Can you tell me where town is?</Option>
+                </Box>
+            </Dialogue>
+        </Person>
+    </Objects>
+</Level>

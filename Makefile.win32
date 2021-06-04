@@ -1,0 +1,14 @@
+CC=i386-mingw32-g++
+CFLAGS=-c `/usr/i486-mingw32/bin/sdl-config --cflags`
+LDFLAGS=`/usr/i486-mingw32/bin/sdl-config --static-libs` -lSDL -lSDL_image -lSDL_ttf -lpng -lfreetype -lz -lm -llua -static -Wl,-subsystem,windows
+SOURCES=src/main.cpp src/embed.cpp src/lua-api.cpp src/sprite.cpp src/quest.cpp src/npc.cpp src/object.cpp src/window.cpp src/player.cpp src/area.cpp src/xml/tinystr.cpp src/xml/tinyxml.cpp src/xml/tinyxmlerror.cpp src/xml/tinyxmlparser.cpp
+OBJECTS=$(SOURCES:.cpp=.o)
+EXECUTABLE=test.exe
+
+all: $(SOURCES) $(EXECUTABLE)
+	
+$(EXECUTABLE): $(OBJECTS) 
+	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
+
+.cpp.o:
+	$(CC) $(CFLAGS) $< -o $@

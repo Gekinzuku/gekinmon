@@ -1,0 +1,4 @@
+2/13/2011:
+Whenever player passes an NPC (Y coordinate) the order it is rendered in gets moved to accommodate the change.
+NPCs are now actually solid objects.
+Multiple layers of foreground added also gives a pseudo Z axis for objects to be higher than each other.

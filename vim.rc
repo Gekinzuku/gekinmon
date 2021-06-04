@@ -1,0 +1,60 @@
+source ~/.vimrc
+
+e src/main.cpp
+
+tabnew
+e src/area.h
+vsplit
+e src/area.cpp
+
+tabnew
+e src/game.h
+vsplit
+e src/game.cpp
+
+tabnew
+e src/battle.h
+vsplit
+e src/battle.cpp
+
+tabnew
+e src/embed.h
+vsplit
+e src/embed.cpp
+
+tabnew
+e src/lua-api.h
+vsplit
+e src/lua-api.cpp
+
+tabnew
+e src/npc.h
+vsplit
+e src/npc.cpp
+
+tabnew
+e src/object.h
+vsplit
+e src/object.cpp
+
+tabnew
+e src/player.h
+vsplit
+e src/player.cpp
+
+tabnew
+e src/quest.h
+vsplit
+e src/quest.cpp
+
+tabnew
+e src/sprite.h
+vsplit
+e src/sprite.cpp
+
+tabnew
+e src/window.h
+vsplit
+e src/window.cpp
+
+tabn

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Mission>
+	<!-- Header -->
+	<Title>The Mystery of the Stolen Pills.</Title>
+	<Description>Retrieve the stolen pills for the old man.</Description>
+	<Start>
+		<Objective action="start">001</Objective>
+		<Modification action="enable">001</Modification>
+	</Start>
+
+	<!-- Objectives -->
+	<Objective id="001">
+		<Description>Talk to the old man by the arch in town about the stolen pills.</Description>
+		<!-- Required, Optional, Select (Needs attribute select=) -->
+		<Class>Required</Class>
+		<Visible>Yes</Visible>
+		<Action area="Town" id="Pill Guy">Talk</Action>
+		<Completion>
+			<Objective action="start">002</Objective>
+			<Modification action="enable">002</Modification>
+		</Completion>
+	</Objective>
+	<Objective id="002">
+		<Description>Return to the old man with news about his pills.</Description>
+		<Class>Required</Class>
+		<Visible>Yes</Visible>
+		<Action area="Town" id="Old Man">Talk</Action>
+		<Completion>
+			<Modification action="disable">001</Modification>
+			<Modification action="disable">002</Modification>
+			<Gold>10</Gold>
+			<Quest>Complete</Quest>
+		</Completion>
+	</Objective>
+
+	<!-- Modifications to areas, objects, npcs, etc for the quest -->
+	<Modification id="001">
+		<Action area="Town" id="Pill Guy">Dialogue</Action>
+		<Text><Box>You want my pills? I already took them. Ha ha!</Box></Text>
+	</Modification>
+	<Modification id="002">
+		<Action area="Town" id="Old Man">Dialogue</Action>
+		<Text>
+			<Box>So youngin', what news do you bring?</Box>
+			<Box>He already took them? *sigh*</Box>
+			<Box>Well thanks for your time youngin'. If only more kids were like you. Take this for your troubles.</Box>
+		</Text>
+	</Modification>
+</Mission>
